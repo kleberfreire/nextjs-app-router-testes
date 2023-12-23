@@ -3,6 +3,7 @@ import { Search, ShoppingBag } from 'lucide-react'
 import Image from "next/image";
 import { CartWidget } from "./cart-widget";
 import { SearchForm } from "./search-form";
+import { Suspense } from "react";
 
 export function Header() {
   return (
@@ -15,7 +16,9 @@ export function Header() {
           <Search className="w-5 h-5 text-zinc-500" />
           <input placeholder="Buscar produto..." className="flex-1 bg-transparent text-sm outline-none placeholder:text-zinc-500"/>
         </form> */}
-        <SearchForm />
+        <Suspense fallback={null}>
+          <SearchForm />
+        </Suspense>
       </div>
       <div className="flex items-center gap-4">
         <CartWidget />

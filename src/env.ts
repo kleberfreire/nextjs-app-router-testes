@@ -6,11 +6,7 @@ export const env = createEnv({
   server: {
     APP_URL: z.string().url(),
   },
-  /*
-   * Environment variables available on the client (and server).
-   *
-   * 💡 You'll get type errors if these are not prefixed with NEXT_PUBLIC_.
-   */
+
   client: {
     NEXT_PUBLIC_API_BASE_URL: z.string().min(1),
   },
